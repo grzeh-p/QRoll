@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QRoller</title>
+    <script type = "text/javascript">
+    function roll(){
+        //create variables for form elements
+        var spnFinal = document.getElementById("spnFinal");
+        //get random number
+        var k20 = Math.random() * 20;
+        //get the ceiling
+        var final = Math.ceil(k20);
+        spnFinal.innerHTML = final;
+        }
+    </script>
+</head>
+<body>
+<h1>Basic Roll k20</h1>
+    <form>
+        <fieldset>
+            <label>final</label>
+            <span id = "spnFinal">0</span><br>
+            <button type = "button"
+                    onclick = "roll()">
+                roll the dice
+            </button>
+        </fieldset>
+    </form>
+</body>
+</html>

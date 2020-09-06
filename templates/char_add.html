@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tworzenie postaci</title>
+    </head>
+    <body>
+        <form method="POST"> <!-- metoda POST wysyla parametry w naglówku żądania-->
+            <input type="number" name="OWNER_ID" placeholder="czyje?"><br>
+            <input type="text" name="NAME" placeholder="imie"><br>
+            <input type="number" name="CHAR_LEVEL" placeholder="poziom"><br>
+
+            <br>BAB:<br>
+            <input type="radio"  name="BAB_progression" value=3>
+            <label for="3">Wojownik</label>
+            <input type="radio"  name="BAB_progression" value=2>
+            <label for="2">Łotr</label>
+            <input type="radio"  name="BAB_progression" value=1>
+            <label for="1">Czarodziej</label><br>
+
+            <br>Rzut obronny na Kondycję:<br>
+            <input type="radio" name="SAV_FORT" value=1>
+            <label for="1">Słabo</label>
+            <input type="radio" name="SAV_FORT" value=2>
+            <label for="2">Mocny</label><br>
+
+            <br>Rzut Obronny na Zręczność:<br>
+            <input type="radio" name="SAV_DEX" value=1>
+            <label for="1">Słabo</label>
+            <input type="radio" name="SAV_DEX" value=2>
+            <label for="2">Mocny</label><br>
+
+            <br>Rzut obronny na Wolę:<br>
+            <input type="radio" name="SAV_WILL" value=1>
+            <label for="1">Słabo</label>
+            <input type="radio" name="SAV_WILL" value=2>
+            <label for="2">Mocny</label><br>
+
+            <input type="submit" value="STFUSZ">
+        </form>
+    </body>
+</html>
