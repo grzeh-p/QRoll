@@ -6,7 +6,13 @@
     </head>
     <body>
         <form method="POST"> <!-- metoda POST wysyla parametry w naglówku żądania-->
-            <input type="number" name="OWNER_ID" placeholder="czyje?"><br>
+            <label for="owner">Wybierz właściciela:</label>
+            <select name="OWNER_ID" id="owner">
+                {% for row in rows %}
+                    <option value="{{ row["ID"] }}">{{ row["USERNAME"] }}</option>
+                {% endfor %}
+            </select><br>
+
             <input type="text" name="NAME" placeholder="imie"><br>
             <input type="number" name="CHAR_LEVEL" placeholder="poziom"><br>
 
@@ -20,19 +26,19 @@
 
             <br>Rzut obronny na Kondycję:<br>
             <input type="radio" name="SAV_FORT" value=1>
-            <label for="1">Słabo</label>
+            <label for="1">Słaby</label>
             <input type="radio" name="SAV_FORT" value=2>
             <label for="2">Mocny</label><br>
 
             <br>Rzut Obronny na Zręczność:<br>
             <input type="radio" name="SAV_DEX" value=1>
-            <label for="1">Słabo</label>
+            <label for="1">Słaby</label>
             <input type="radio" name="SAV_DEX" value=2>
             <label for="2">Mocny</label><br>
 
             <br>Rzut obronny na Wolę:<br>
             <input type="radio" name="SAV_WILL" value=1>
-            <label for="1">Słabo</label>
+            <label for="1">Słaby</label>
             <input type="radio" name="SAV_WILL" value=2>
             <label for="2">Mocny</label><br>
 

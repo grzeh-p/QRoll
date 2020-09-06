@@ -2,7 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>view existing users</title>
 </head>
-<body>view existing users</body>
+<body>
+<table border=1>
+    <thead>
+        <td>ID</td>
+        <td>Imię/Nazwa</td>
+    </thead>
+    {% for row in rows %}
+        <tr>
+        <td>{{ row["ID"] }}</td>
+        <td>{{ row["USERNAME"] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
 </html>

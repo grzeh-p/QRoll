@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List of existing characters</title>
 </head>
 <body>
-this is example list of characters
+<table border=1>
+    <thead>
+        <td>Właściciel</td>
+        <td>Imię/Nazwa</td>
+        <td>Poziom</td>
+        <td>BAB</td>
+        <td>SAV FORT</td>
+        <td>SAV DEX</td>
+        <td>SAV WILL</td>
+    </thead>
+    {% for row in rows %}
+        <tr>
+        <td>{{ row["OWNER_ID"] }}</td>
+        <td>{{ row["NAME"] }}</td>
+        <td>{{ row["CHAR_LEVEL"] }}</td>
+        <td>{{ row["BAB_progression"] }}</td>
+        <td>{{ row["SAV_FORT"] }}</td>
+        <td>{{ row["SAV_DEX"] }}</td>
+        <td>{{ row["SAV_WILL"] }}</td>
+        </tr>
+    {% endfor %}
+</table>
 </body>
 </html>
